@@ -21,10 +21,9 @@ public class SecondActivity extends AppCompatActivity {
 
         Bundle arguments = getIntent().getExtras();
 
-
         User user;
         if (arguments!=null){
-            user = (User) arguments.getSerializable(User.class.getSimpleName());
+            user = (User) arguments.getParcelable(User.class.getSimpleName());
             textView.setText("Имя: " + user.getName() + "\nОрганизация: " + user.getCompany() + "\nВозраст: " + String.valueOf(user.getAge()) );
 
         }
